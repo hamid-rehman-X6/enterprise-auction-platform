@@ -2,14 +2,14 @@
   "name": "enterprise-auction-platform-server",
   "version": "1.0.0",
   "description": "Enterprise Auction Platform Server  ",
-  "main": "server.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon server.ts"
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
