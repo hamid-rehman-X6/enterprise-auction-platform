@@ -1,11 +1,5 @@
-import "./App.css";
-
 function App() {
-  return (
-    <>
-      <div className="text-2xl">Enterprise Auction Platform</div>
-    </>
-  );
+  return <>Enterprise Auction Platform</>;
 }
 
 export default App;
