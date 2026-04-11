@@ -1,10 +1,10 @@
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import HeroSection from "./components/sections/HeroSection";
-import FeaturedAuctions from "./components/sections/FeaturedAuctions";
-import HowItWorks from "./components/sections/HowItWorks";
-import TrustSection from "./components/sections/TrustSection";
-import CallToAction from "./components/sections/CallToAction";
+import Navbar from "@src/components/layout/Navbar";
+import Footer from "@src/components/layout/Footer";
+import HeroSection from "@src/components/sections/HeroSection";
+import FeaturedAuctions from "@src/components/sections/FeaturedAuctions";
+import HowItWorks from "@src/components/sections/HowItWorks";
+import TrustSection from "@src/components/sections/TrustSection";
+import CallToAction from "@src/components/sections/CallToAction";
 
 function App() {
   return (
