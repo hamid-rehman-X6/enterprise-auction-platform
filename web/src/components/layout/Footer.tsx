@@ -1,6 +1,5 @@
 // import { Twitter, , Github } from 'lucide-react';
 import { BRAND } from "@src/constants/brand";
-import auctoraLogo from "@src/assets/images/logo/auctora-seegreen.png";
 
 export default function Footer() {
   return (
@@ -10,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2">
               <img
-                src={auctoraLogo}
+                src={BRAND.logo}
                 alt="Auctora Logo"
                 className="h-40 w-40 shrink-0 object-cover"
               />

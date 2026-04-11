@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import auctoraLogo from "@src/assets/images/logo/auctora-seegreen-without-text.png";
+import { BRAND } from "@src/constants/brand";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex cursor-pointer items-center gap-2">
           <img
-            src={auctoraLogo}
+            src={BRAND.logoWithoutText}
             alt="Auctora Logo"
             className="h-16 w-16 shrink-0 object-cover"
           />
