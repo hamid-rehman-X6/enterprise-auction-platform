@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import auctoraLogo from "@src/assets/images/logo/auctora-seegreen-without-text.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,18 +14,17 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-secondary/95 py-4 shadow-md backdrop-blur-md"
-          : "bg-transparent py-6"
+          ? "bg-secondary/95 py-2 shadow-md backdrop-blur-md"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex cursor-pointer items-center gap-2">
-          <div className="bg-primary flex h-8 w-8 items-center justify-center rounded shadow-lg">
-            <span className="text-xl leading-none font-bold text-white">A</span>
-          </div>
-          <span className="text-2xl font-bold tracking-tight text-white">
-            AuctionPro
-          </span>
+          <img
+            src={auctoraLogo}
+            alt="Auctora Logo"
+            className="h-16 w-16 shrink-0 object-cover"
+          />
         </div>
 
         <div className="hidden items-center gap-8 text-sm font-medium md:flex">
