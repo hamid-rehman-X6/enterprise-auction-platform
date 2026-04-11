@@ -1,3 +1,4 @@
+import { BRAND } from "@src/constants/brand";
 import { ShieldCheck, Eye, Headset, Globe } from "lucide-react";
 
 const FEATURES = [
@@ -29,8 +30,7 @@ const FEATURES = [
 
 const TESTIMONIALS = [
   {
-    quote:
-      '"AuctionPro has transformed how I acquire fine art. The real-time bidding experience is unmatched — transparent, fast, and completely trustworthy."',
+    quote: `"${BRAND.name} has transformed how I acquire fine art. The real-time bidding experience is unmatched — transparent, fast, and completely trustworthy."`,
     author: "Sir Edward Blackwood",
     role: "Private Collector, London",
     init: "EB",

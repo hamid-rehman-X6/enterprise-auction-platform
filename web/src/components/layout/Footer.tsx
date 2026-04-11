@@ -1,4 +1,6 @@
 // import { Twitter, , Github } from 'lucide-react';
+import { BRAND } from "@src/constants/brand";
+import auctoraLogo from "@src/assets/images/logo/auctora-seegreen.png";
 
 export default function Footer() {
   return (
@@ -6,20 +8,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
-            <div className="mb-6 flex items-center gap-2">
-              <div className="bg-primary flex h-6 w-6 items-center justify-center rounded">
-                <span className="text-xs leading-none font-bold text-white">
-                  A
-                </span>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                AuctionPro
-              </span>
+            <div className="flex items-center gap-2">
+              <img
+                src={auctoraLogo}
+                alt="Auctora Logo"
+                className="h-40 w-40 shrink-0 object-cover"
+              />
             </div>
-            <p className="max-w-xs text-sm leading-relaxed">
-              Enterprise-grade real-time auction management for the world's
-              leading auction houses and collectors.
-            </p>
           </div>
 
           <div>
@@ -109,29 +104,29 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs md:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} AuctionPro Enterprise. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {BRAND.name} Enterprise. All
+            rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <a
               href="#"
               className="text-slate-400 transition-colors hover:text-white"
             >
-              {/* <Twitter size={18} /> */}
+              <Twitter size={18} />
             </a>
             <a
               href="#"
               className="text-slate-400 transition-colors hover:text-white"
             >
-              {/* <Linkedin size={18} /> */}
+              <Linkedin size={18} />
             </a>
             <a
               href="#"
               className="text-slate-400 transition-colors hover:text-white"
             >
-              {/* <Github size={18} /> */}
+              <Github size={18} />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

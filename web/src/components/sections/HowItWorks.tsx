@@ -1,3 +1,4 @@
+import { BRAND } from "@src/constants/brand";
 import { UserPlus, Search, Gavel, Trophy, CheckCircle } from "lucide-react";
 
 const STEPS = [
@@ -37,7 +38,7 @@ export default function HowItWorks() {
       <div className="section-container">
         <div className="mx-auto mb-20 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
-            How AuctionPro Works
+            How {BRAND.name} Works
           </h2>
           <p className="text-lg text-slate-500">
             From registration to winning — a seamless, transparent process
