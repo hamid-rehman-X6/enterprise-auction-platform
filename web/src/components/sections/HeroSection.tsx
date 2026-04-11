@@ -1,3 +1,5 @@
+import auctionHall from "@src/assets/images/home/auction-hall-1.png";
+
 export default function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
@@ -5,11 +7,10 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1577720643272-265f09367456?q=80&w=2000&auto=format&fit=crop")',
+          backgroundImage: `url(${auctionHall})`,
         }}
       >
-        <div className="bg-dark/80 absolute inset-0 backdrop-blur-[2px]"></div>
+        <div className="bg-dark/60 absolute inset-0 backdrop-blur-[1px]"></div>
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
