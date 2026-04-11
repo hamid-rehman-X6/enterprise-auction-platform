@@ -8,7 +8,7 @@ import CallToAction from "./components/sections/CallToAction";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col font-sans">
+    <div className="flex min-h-screen flex-col bg-[#fafafa] font-sans">
       <Navbar />
 
       <main className="flex-1">

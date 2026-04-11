@@ -2,28 +2,28 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-slate-400 py-16 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-dark border-t border-white/5 py-16 text-slate-400">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
-                <span className="text-white font-bold text-xs leading-none">
+            <div className="mb-6 flex items-center gap-2">
+              <div className="bg-primary flex h-6 w-6 items-center justify-center rounded">
+                <span className="text-xs leading-none font-bold text-white">
                   A
                 </span>
               </div>
-              <span className="text-white font-bold text-xl tracking-tight">
+              <span className="text-xl font-bold tracking-tight text-white">
                 AuctionPro
               </span>
             </div>
-            <p className="text-sm leading-relaxed max-w-xs">
+            <p className="max-w-xs text-sm leading-relaxed">
               Enterprise-grade real-time auction management for the world's
               leading auction houses and collectors.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-medium text-xs tracking-wider uppercase mb-6">
+            <h4 className="mb-6 text-xs font-medium tracking-wider text-white uppercase">
               Platform
             </h4>
             <ul className="space-y-4 text-sm">
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-medium text-xs tracking-wider uppercase mb-6">
+            <h4 className="mb-6 text-xs font-medium tracking-wider text-white uppercase">
               Company
             </h4>
             <ul className="space-y-4 text-sm">
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-medium text-xs tracking-wider uppercase mb-6">
+            <h4 className="mb-6 text-xs font-medium tracking-wider text-white uppercase">
               Legal
             </h4>
             <ul className="space-y-4 text-sm">
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs md:flex-row">
           <p>
             &copy; {new Date().getFullYear()} AuctionPro Enterprise. All rights
             reserved.
@@ -115,19 +115,19 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 transition-colors hover:text-white"
             >
               {/* <Twitter size={18} /> */}
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 transition-colors hover:text-white"
             >
               {/* <Linkedin size={18} /> */}
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 transition-colors hover:text-white"
             >
               {/* <Github size={18} /> */}
             </a>

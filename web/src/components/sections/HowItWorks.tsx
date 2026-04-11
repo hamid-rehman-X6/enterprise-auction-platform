@@ -6,28 +6,28 @@ const STEPS = [
     title: "Register & Verify",
     description:
       "Create your account, complete KYC verification, and get approved to bid within 24 hours.",
-    icon: <UserPlus className="w-6 h-6 text-primary" />,
+    icon: <UserPlus className="text-primary h-6 w-6" />,
   },
   {
     id: "02",
     title: "Browse & Watchlist",
     description:
       "Explore curated auctions across fine art, jewelry, automobiles, and more. Save lots to your watchlist.",
-    icon: <Search className="w-6 h-6 text-primary" />,
+    icon: <Search className="text-primary h-6 w-6" />,
   },
   {
     id: "03",
     title: "Bid in Real-Time",
     description:
       "Join live auction rooms with real-time bid updates, countdown timers, and instant notifications.",
-    icon: <Gavel className="w-6 h-6 text-primary" />,
+    icon: <Gavel className="text-primary h-6 w-6" />,
   },
   {
     id: "04",
     title: "Win & Settle",
     description:
       "Receive instant confirmation, complete secure payment, and arrange delivery or collection.",
-    icon: <Trophy className="w-6 h-6 text-primary" />,
+    icon: <Trophy className="text-primary h-6 w-6" />,
   },
 ];
 
@@ -35,8 +35,8 @@ export default function HowItWorks() {
   return (
     <section className="bg-white">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+        <div className="mx-auto mb-20 max-w-3xl text-center">
+          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
             How AuctionPro Works
           </h2>
           <p className="text-lg text-slate-500">
@@ -45,23 +45,23 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative mb-24">
-          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-px bg-slate-200 z-0"></div>
+        <div className="relative mb-24 grid grid-cols-1 gap-12 md:grid-cols-4">
+          <div className="absolute top-6 right-[10%] left-[10%] z-0 hidden h-px bg-slate-200 md:block"></div>
 
           {STEPS.map((step) => (
             <div key={step.id} className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-xl">
                   {step.icon}
                 </div>
-                <span className="text-slate-300 font-bold text-xl">
+                <span className="text-xl font-bold text-slate-300">
                   {step.id}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="mb-3 text-xl font-bold text-slate-900">
                 {step.title}
               </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-slate-500">
                 {step.description}
               </p>
             </div>
@@ -70,25 +70,25 @@ export default function HowItWorks() {
       </div>
 
       {/* Dark Sub-section */}
-      <div className="bg-secondary border-t border-white/5 py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="bg-secondary border-t border-white/5 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div>
-            <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">
+            <h4 className="text-primary mb-4 text-sm font-bold tracking-widest uppercase">
               Live Auction Room
             </h4>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+            <h2 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-white md:text-5xl">
               Real-Time Bidding,
               <br />
               Zero Compromise
             </h2>
-            <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl">
+            <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-400">
               Our server-authoritative auction engine ensures every bid is
               validated, timestamped, and immutable. Anti-snipe protection, live
               presence indicators, and instant activity feeds keep every
               participant informed.
             </p>
 
-            <ul className="space-y-4 mb-10">
+            <ul className="mb-10 space-y-4">
               {[
                 "Sub-100ms bid propagation to all participants",
                 "Anti-snipe extension with configurable thresholds",
@@ -97,8 +97,8 @@ export default function HowItWorks() {
                 "Automatic lot transitions with auctioneer override",
               ].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-slate-300 font-medium">{feature}</span>
+                  <CheckCircle className="text-primary mt-0.5 h-5 w-5 shrink-0" />
+                  <span className="font-medium text-slate-300">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -112,62 +112,62 @@ export default function HowItWorks() {
           </div>
 
           {/* Simulated UI Screen on Right */}
-          <div className="bg-[#1e293b] rounded-2xl p-1 shadow-2xl border border-white/10">
-            <div className="bg-secondary rounded-xl overflow-hidden border border-white/5">
-              <div className="p-4 border-b border-white/10 flex justify-between items-center bg-[#1e293b]/50">
+          <div className="rounded-2xl border border-white/10 bg-[#1e293b] p-1 shadow-2xl">
+            <div className="bg-secondary overflow-hidden rounded-xl border border-white/5">
+              <div className="flex items-center justify-between border-b border-white/10 bg-[#1e293b]/50 p-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
                   <span className="text-sm font-semibold text-white">
                     LIVE — Fine Art Spring 2026
                   </span>
                 </div>
-                <div className="px-3 py-1 bg-red-500/20 text-red-400 font-mono text-sm rounded border border-red-500/30">
+                <div className="rounded border border-red-500/30 bg-red-500/20 px-3 py-1 font-mono text-sm text-red-400">
                   04:32
                 </div>
               </div>
 
               <div className="p-6">
-                <div className="flex gap-4 mb-8">
+                <div className="mb-8 flex gap-4">
                   <img
                     src="https://images.unsplash.com/photo-1540833132641-fc8a0dbaff45?q=80&w=200&h=200&fit=crop"
                     alt="Artwork"
-                    className="w-24 h-24 rounded object-cover border border-white/10"
+                    className="h-24 w-24 rounded border border-white/10 object-cover"
                   />
                   <div>
-                    <p className="text-slate-400 text-sm mb-1">Lot 1 of 48</p>
-                    <h3 className="text-white font-bold text-lg leading-tight mb-2">
+                    <p className="mb-1 text-sm text-slate-400">Lot 1 of 48</p>
+                    <h3 className="mb-2 text-lg leading-tight font-bold text-white">
                       Monet — Water Lilies Study, 1906
                     </h3>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-sm text-slate-400">
                       Est. $20,000 – $30,000
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-dark rounded-xl p-6 text-center border border-white/5 mb-6">
-                  <p className="text-slate-400 text-sm mb-2 font-medium uppercase tracking-wide">
+                <div className="bg-dark mb-6 rounded-xl border border-white/5 p-6 text-center">
+                  <p className="mb-2 text-sm font-medium tracking-wide text-slate-400 uppercase">
                     Current Highest Bid
                   </p>
-                  <div className="text-4xl font-extrabold text-primary mb-1">
+                  <div className="text-primary mb-1 text-4xl font-extrabold">
                     $24,500
                   </div>
-                  <p className="text-slate-500 text-xs text-center">
+                  <p className="text-center text-xs text-slate-500">
                     Next minimum: $25,000
                   </p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 mb-4">
-                  <button className="bg-[#1e293b] text-primary font-bold py-3 rounded-lg border border-primary/20 hover:bg-primary/10 transition-colors">
+                <div className="mb-4 grid grid-cols-3 gap-3">
+                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
                     $25,000
                   </button>
-                  <button className="bg-[#1e293b] text-primary font-bold py-3 rounded-lg border border-primary/20 hover:bg-primary/10 transition-colors">
+                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
                     $26,000
                   </button>
-                  <button className="bg-[#1e293b] text-primary font-bold py-3 rounded-lg border border-primary/20 hover:bg-primary/10 transition-colors">
+                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
                     $28,000
                   </button>
                 </div>
-                <button className="w-full btn-primary py-4 rounded-lg font-bold text-lg shadow-lg mb-6">
+                <button className="btn-primary mb-6 w-full rounded-lg py-4 text-lg font-bold shadow-lg">
                   Place Bid
                 </button>
 
@@ -179,7 +179,7 @@ export default function HowItWorks() {
                   ].map((bid, i) => (
                     <div
                       key={i}
-                      className="flex justify-between text-sm py-2 border-b border-white/5 last:border-0"
+                      className="flex justify-between border-b border-white/5 py-2 text-sm last:border-0"
                     >
                       <span className="text-slate-400">{bid.u}</span>
                       <span className="text-primary font-mono font-bold">

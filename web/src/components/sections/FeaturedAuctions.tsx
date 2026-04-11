@@ -85,49 +85,49 @@ const AUCTIONS = [
 export default function FeaturedAuctions() {
   return (
     <section className="section-container bg-[#fafafa]">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+      <div className="mb-12 flex flex-col items-end justify-between md:flex-row">
         <div>
-          <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">
+          <h4 className="text-primary mb-2 text-sm font-bold tracking-widest uppercase">
             Featured Auctions
           </h4>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
             Live & Upcoming Events
           </h2>
         </div>
         <a
           href="#"
-          className="flex items-center gap-2 text-primary font-medium hover:text-primary-hover transition-colors mt-4 md:mt-0"
+          className="text-primary hover:text-primary-hover mt-4 flex items-center gap-2 font-medium transition-colors md:mt-0"
         >
           View All Auctions <ArrowRight size={18} />
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {AUCTIONS.map((auction) => (
           <div key={auction.id} className="card group">
             <div className="relative h-60 overflow-hidden">
               <img
                 src={auction.image}
                 alt={auction.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-semibold shadow-sm">
+              <div className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold shadow-sm backdrop-blur">
                 <span
-                  className={`w-2 h-2 rounded-full ${auction.statusColor}`}
+                  className={`h-2 w-2 rounded-full ${auction.statusColor}`}
                 ></span>
                 {auction.status}
               </div>
-              <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-md text-white text-xs font-medium">
+              <div className="absolute top-4 right-4 rounded-md bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
                 {auction.category}
               </div>
             </div>
 
-            <div className="p-6 flex-1 flex flex-col">
-              <h3 className="text-lg font-bold text-slate-900 mb-3 line-clamp-2 leading-tight">
+            <div className="flex flex-1 flex-col p-6">
+              <h3 className="mb-3 line-clamp-2 text-lg leading-tight font-bold text-slate-900">
                 {auction.title}
               </h3>
 
-              <div className="flex items-center gap-4 text-sm text-slate-500 mb-6">
+              <div className="mb-6 flex items-center gap-4 text-sm text-slate-500">
                 <div className="flex items-center gap-1">
                   <MapPin size={16} />
                   <span>{auction.location}</span>
@@ -138,9 +138,9 @@ export default function FeaturedAuctions() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-end mt-auto pt-4 border-t border-slate-100">
+              <div className="mt-auto flex items-end justify-between border-t border-slate-100 pt-4">
                 <div>
-                  <p className="text-xs text-slate-400 font-medium uppercase mb-1">
+                  <p className="mb-1 text-xs font-medium text-slate-400 uppercase">
                     Est. Value
                   </p>
                   <p className="text-sm font-semibold text-slate-600">
@@ -148,7 +148,7 @@ export default function FeaturedAuctions() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs text-slate-400 font-medium uppercase mb-1">
+                  <p className="mb-1 text-xs font-medium text-slate-400 uppercase">
                     Current Bid
                   </p>
                   <p
@@ -159,7 +159,7 @@ export default function FeaturedAuctions() {
                 </div>
               </div>
 
-              <button className="w-full mt-6 py-2.5 rounded border border-primary/20 text-primary font-medium hover:bg-primary/5 transition-colors text-sm">
+              <button className="border-primary/20 text-primary hover:bg-primary/5 mt-6 w-full rounded border py-2.5 text-sm font-medium transition-colors">
                 View Auction &rarr;
               </button>
             </div>

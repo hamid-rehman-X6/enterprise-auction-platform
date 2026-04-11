@@ -11,69 +11,69 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-secondary/95 backdrop-blur-md py-4 shadow-md"
+          ? "bg-secondary/95 py-4 shadow-md backdrop-blur-md"
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <div className="flex items-center gap-2 cursor-pointer">
-          <div className="w-8 h-8 bg-primary rounded shadow-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl leading-none">A</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex cursor-pointer items-center gap-2">
+          <div className="bg-primary flex h-8 w-8 items-center justify-center rounded shadow-lg">
+            <span className="text-xl leading-none font-bold text-white">A</span>
           </div>
-          <span className="text-white font-bold text-2xl tracking-tight">
+          <span className="text-2xl font-bold tracking-tight text-white">
             AuctionPro
           </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden items-center gap-8 text-sm font-medium md:flex">
           <a
             href="#"
-            className="text-slate-300 hover:text-white transition-colors"
+            className="text-slate-300 transition-colors hover:text-white"
           >
             Auctions
           </a>
           <a
             href="#"
-            className="text-slate-300 hover:text-white transition-colors"
+            className="text-slate-300 transition-colors hover:text-white"
           >
             How It Works
           </a>
           <a
             href="#"
-            className="text-slate-300 hover:text-white transition-colors"
+            className="text-slate-300 transition-colors hover:text-white"
           >
             About
           </a>
           <a
             href="#"
-            className="text-slate-300 hover:text-white transition-colors"
+            className="text-slate-300 transition-colors hover:text-white"
           >
             FAQ
           </a>
           <a
             href="#"
-            className="text-slate-300 hover:text-white transition-colors"
+            className="text-slate-300 transition-colors hover:text-white"
           >
             Contact
           </a>
         </div>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden items-center gap-6 md:flex">
           <a
             href="#"
-            className="text-white text-sm font-medium hover:text-primary transition-colors"
+            className="hover:text-primary text-sm font-medium text-white transition-colors"
           >
             Sign In
           </a>
-          <button className="btn btn-primary px-5 py-2 text-sm rounded-md">
+          <button className="btn btn-primary rounded-md px-5 py-2 text-sm">
             Get Started
           </button>
         </div>
 
         <div className="md:hidden">
-          <button className="text-white p-2">
+          <button className="p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
