@@ -1,0 +1,9 @@
+@layer utilities {
+  .font-sans-custom {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono-custom {
+    font-family: var(--font-mono);
+  }
+}

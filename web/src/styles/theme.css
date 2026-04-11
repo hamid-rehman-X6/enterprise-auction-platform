@@ -2,6 +2,8 @@
   --color-primary: #14b8a6;
   --color-primary-hover: #0d9488;
   --color-secondary: #0f172a;
-  --color-dark: #0a0f1c; /* Deep navy from the screenshots */
-  --font-sans: "Inter", "Roboto", sans-serif;
+  --color-dark: #0a0f1c;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
