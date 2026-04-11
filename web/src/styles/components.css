@@ -1,0 +1,21 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center font-medium rounded-lg transition-colors px-6 py-3 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/20;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] border border-slate-100 overflow-hidden flex flex-col transition-transform hover:-translate-y-1 duration-300;
+  }
+}

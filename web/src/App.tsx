@@ -1,5 +1,27 @@
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import HeroSection from "./components/sections/HeroSection";
+import FeaturedAuctions from "./components/sections/FeaturedAuctions";
+import HowItWorks from "./components/sections/HowItWorks";
+import TrustSection from "./components/sections/TrustSection";
+import CallToAction from "./components/sections/CallToAction";
+
 function App() {
-  return <>Enterprise Auction Platform</>;
+  return (
+    <div className="min-h-screen bg-[#fafafa] flex flex-col font-sans">
+      <Navbar />
+
+      <main className="flex-1">
+        <HeroSection />
+        <FeaturedAuctions />
+        <HowItWorks />
+        <TrustSection />
+        <CallToAction />
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
