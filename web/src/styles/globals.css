@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@import "./theme.css";
+@import "./components.css";
+@import "./utilities.css";
+
+body {
+  font-family: var(--font-sans, "Inter", sans-serif);
+  background-color: #fafafa;
+}
