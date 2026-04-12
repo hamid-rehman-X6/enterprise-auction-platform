@@ -1,3 +1,4 @@
+import { LIVE_AUCTION_ROOM } from "@src/constants/auctionImages";
 import { BRAND } from "@src/constants/brand";
 import { UserPlus, Search, Gavel, Trophy, CheckCircle } from "lucide-react";
 
@@ -36,33 +37,34 @@ export default function HowItWorks() {
   return (
     <section className="bg-white">
       <div className="section-container">
-        <div className="mx-auto mb-20 max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+        <div className="mx-auto mb-14 text-center">
+          <p className="mb-2 text-xs font-semibold tracking-widest text-teal-600 uppercase">
+            Process
+          </p>
+          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-3xl">
             How {BRAND.name} Works
           </h2>
-          <p className="text-lg text-slate-500">
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-slate-500">
             From registration to winning — a seamless, transparent process
             designed for serious collectors and institutions.
           </p>
         </div>
 
-        <div className="relative mb-24 grid grid-cols-1 gap-12 md:grid-cols-4">
-          <div className="absolute top-6 right-[10%] left-[10%] z-0 hidden h-px bg-slate-200 md:block"></div>
-
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step) => (
-            <div key={step.id} className="relative z-10">
-              <div className="mb-6 flex items-center gap-4">
-                <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-xl">
+            <div key={step.id} className="relative">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-lg border border-teal-100">
                   {step.icon}
                 </div>
-                <span className="text-xl font-bold text-slate-300">
+                <span className="font-mono text-xs font-bold text-slate-300">
                   {step.id}
                 </span>
               </div>
-              <h3 className="mb-3 text-xl font-bold text-slate-900">
+              <h3 className="mb-2 text-sm font-semibold text-slate-900">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-slate-500">
+              <p className="text-xs leading-relaxed text-slate-500">
                 {step.description}
               </p>
             </div>
@@ -71,25 +73,25 @@ export default function HowItWorks() {
       </div>
 
       {/* Dark Sub-section */}
-      <div className="bg-secondary border-t border-white/5 px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div className="bg-secondary mx-auto max-w-7xl border-t border-white/5 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <h4 className="text-primary mb-4 text-sm font-bold tracking-widest uppercase">
+            <h4 className="text-primary mb-3 text-xs font-semibold tracking-widest uppercase">
               Live Auction Room
             </h4>
-            <h2 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-white md:text-5xl">
+            <h2 className="mb-5 text-3xl leading-tight font-bold tracking-tight text-white md:text-4xl">
               Real-Time Bidding,
               <br />
               Zero Compromise
             </h2>
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-400">
+            <p className="mb-8 max-w-xl text-sm leading-relaxed text-slate-400">
               Our server-authoritative auction engine ensures every bid is
               validated, timestamped, and immutable. Anti-snipe protection, live
               presence indicators, and instant activity feeds keep every
               participant informed.
             </p>
 
-            <ul className="mb-10 space-y-4">
+            <ul className="mb-8 space-y-3">
               {[
                 "Sub-100ms bid propagation to all participants",
                 "Anti-snipe extension with configurable thresholds",
@@ -97,8 +99,8 @@ export default function HowItWorks() {
                 "In-auction chat with moderation controls",
                 "Automatic lot transitions with auctioneer override",
               ].map((feature, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="text-primary mt-0.5 h-5 w-5 shrink-0" />
+                <li key={i} className="flex items-start gap-3 text-sm">
+                  <CheckCircle className="text-primary mt-0.5 h-4 w-4 shrink-0" />
                   <span className="font-medium text-slate-300">{feature}</span>
                 </li>
               ))}
@@ -113,83 +115,81 @@ export default function HowItWorks() {
           </div>
 
           {/* Simulated UI Screen on Right */}
-          <div className="rounded-2xl border border-white/10 bg-[#1e293b] p-1 shadow-2xl">
-            <div className="bg-secondary overflow-hidden rounded-xl border border-white/5">
-              <div className="flex items-center justify-between border-b border-white/10 bg-[#1e293b]/50 p-4">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
-                  <span className="text-sm font-semibold text-white">
-                    LIVE — Fine Art Spring 2026
-                  </span>
-                </div>
-                <div className="rounded border border-red-500/30 bg-red-500/20 px-3 py-1 font-mono text-sm text-red-400">
-                  04:32
+          <div className="overflow-hidden rounded-xl border border-slate-700 bg-[#1e293b]">
+            <div className="flex items-center justify-between border-b border-slate-700 bg-[#0F172A] px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
+                <span className="text-sm font-semibold text-white">
+                  LIVE — Fine Art Spring 2026
+                </span>
+              </div>
+              <div className="animate-pulse rounded-md border border-red-500/40 bg-red-500/20 px-3 py-1 font-mono text-sm font-bold text-red-400">
+                04:32
+              </div>
+            </div>
+
+            <div className="p-6">
+              <div className="mb-8 flex gap-4">
+                <img
+                  src={LIVE_AUCTION_ROOM.waterLilies}
+                  alt="Artwork"
+                  className="h-24 w-24 rounded border border-white/10 object-cover"
+                />
+                <div>
+                  <p className="mb-1 text-sm text-slate-400">Lot 1 of 48</p>
+                  <h3 className="mb-2 text-lg leading-tight font-bold text-white">
+                    Monet — Water Lilies Study, 1906
+                  </h3>
+                  <p className="text-sm text-slate-400">
+                    Est. $20,000 – $30,000
+                  </p>
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="mb-8 flex gap-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1540833132641-fc8a0dbaff45?q=80&w=200&h=200&fit=crop"
-                    alt="Artwork"
-                    className="h-24 w-24 rounded border border-white/10 object-cover"
-                  />
-                  <div>
-                    <p className="mb-1 text-sm text-slate-400">Lot 1 of 48</p>
-                    <h3 className="mb-2 text-lg leading-tight font-bold text-white">
-                      Monet — Water Lilies Study, 1906
-                    </h3>
-                    <p className="text-sm text-slate-400">
-                      Est. $20,000 – $30,000
-                    </p>
-                  </div>
+              <div className="bg-dark mb-6 rounded-xl border border-white/5 p-6 text-center">
+                <p className="mb-2 text-sm font-medium tracking-wide text-slate-400 uppercase">
+                  Current Highest Bid
+                </p>
+                <div className="text-primary mb-1 text-4xl font-extrabold">
+                  $24,500
                 </div>
+                <p className="text-center text-xs text-slate-500">
+                  Next minimum: $25,000
+                </p>
+              </div>
 
-                <div className="bg-dark mb-6 rounded-xl border border-white/5 p-6 text-center">
-                  <p className="mb-2 text-sm font-medium tracking-wide text-slate-400 uppercase">
-                    Current Highest Bid
-                  </p>
-                  <div className="text-primary mb-1 text-4xl font-extrabold">
-                    $24,500
-                  </div>
-                  <p className="text-center text-xs text-slate-500">
-                    Next minimum: $25,000
-                  </p>
-                </div>
-
-                <div className="mb-4 grid grid-cols-3 gap-3">
-                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
-                    $25,000
-                  </button>
-                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
-                    $26,000
-                  </button>
-                  <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
-                    $28,000
-                  </button>
-                </div>
-                <button className="btn-primary mb-6 w-full rounded-lg py-4 text-lg font-bold shadow-lg">
-                  Place Bid
+              <div className="mb-4 grid grid-cols-3 gap-3">
+                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+                  $25,000
                 </button>
+                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+                  $26,000
+                </button>
+                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+                  $28,000
+                </button>
+              </div>
+              <button className="btn-primary mb-6 w-full rounded-lg py-4 text-lg font-bold shadow-lg">
+                Place Bid
+              </button>
 
-                <div className="space-y-3">
-                  {[
-                    { u: "Buyer #4821", amt: "$24,500", t: "2m ago" },
-                    { u: "Buyer #2934", amt: "$23,000", t: "4m ago" },
-                    { u: "Buyer #7156", amt: "$21,500", t: "6m ago" },
-                  ].map((bid, i) => (
-                    <div
-                      key={i}
-                      className="flex justify-between border-b border-white/5 py-2 text-sm last:border-0"
-                    >
-                      <span className="text-slate-400">{bid.u}</span>
-                      <span className="text-primary font-mono font-bold">
-                        {bid.amt}
-                      </span>
-                      <span className="text-slate-500">{bid.t}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="space-y-3">
+                {[
+                  { u: "Buyer #4821", amt: "$24,500", t: "2m ago" },
+                  { u: "Buyer #2934", amt: "$23,000", t: "4m ago" },
+                  { u: "Buyer #7156", amt: "$21,500", t: "6m ago" },
+                ].map((bid, i) => (
+                  <div
+                    key={i}
+                    className="flex justify-between border-b border-white/5 py-2 text-sm last:border-0"
+                  >
+                    <span className="text-slate-400">{bid.u}</span>
+                    <span className="text-primary font-mono font-bold">
+                      {bid.amt}
+                    </span>
+                    <span className="text-slate-500">{bid.t}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
