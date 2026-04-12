@@ -92,24 +92,27 @@ export default function TrustSection() {
       {/* Testimonials Bottom Half */}
       <div className="border-t border-slate-200 bg-[#f8fafc] py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
-            <h4 className="text-primary mb-4 text-sm font-bold tracking-widest uppercase">
+          <div className="mb-14 text-center">
+            <h4 className="text-primary mb-2 text-xs font-semibold tracking-widest uppercase">
               Testimonials
             </h4>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-3xl">
               Trusted by Industry Leaders
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="card justify-between p-8">
+              <div
+                key={i}
+                className="rounded-xl border border-slate-300 bg-white p-6"
+              >
                 <div>
-                  <div className="mb-6 flex gap-1">
+                  <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, j) => (
                       <svg
                         key={j}
-                        className="h-5 w-5 text-yellow-400"
+                        className="h-4 w-4 text-yellow-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -117,18 +120,20 @@ export default function TrustSection() {
                       </svg>
                     ))}
                   </div>
-                  <p className="mb-8 text-lg leading-relaxed text-slate-600 italic">
+                  <p className="mb-5 text-sm leading-relaxed text-slate-600 italic">
                     {t.quote}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="bg-dark flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-full text-sm font-bold tracking-widest text-white">
+                <div className="flex items-center gap-3">
+                  <div className="bg-dark flex h-9 w-9 shrink-0 flex-col items-center justify-center rounded-full text-xs font-bold tracking-widest text-white">
                     {t.init}
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900">{t.author}</h5>
-                    <p className="text-sm text-slate-500">{t.role}</p>
+                    <h5 className="text-sm font-semibold text-slate-800">
+                      {t.author}
+                    </h5>
+                    <p className="text-xs text-slate-400">{t.role}</p>
                   </div>
                 </div>
               </div>

@@ -1,11 +1,11 @@
 export default function CallToAction() {
   return (
     <section className="bg-dark border-t border-white/5 px-4 py-28 text-center sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+      <div className="mx-auto max-w-3xl">
+        <h2 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-3xl">
           Ready to Bid at the Highest Level?
         </h2>
-        <p className="mx-auto mb-12 max-w-2xl text-lg text-slate-400">
+        <p className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-slate-400">
           Join 4,800+ verified bidders and leading auction houses on the most
           trusted real-time auction platform.
         </p>
