@@ -14,8 +14,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-secondary/95 py-2 shadow-md backdrop-blur-md"
-          : "bg-transparent py-4"
+          ? "bg-[#fafafa]/95 shadow-md backdrop-blur-md"
+          : "bg-transparent py-2"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -30,31 +30,31 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 text-sm font-medium md:flex">
           <a
             href="#"
-            className="text-slate-300 transition-colors hover:text-white"
+            className={`hover:text-primary transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             Auctions
           </a>
           <a
             href="#"
-            className="text-slate-300 transition-colors hover:text-white"
+            className={`hover:text-primary transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             How It Works
           </a>
           <a
             href="#"
-            className="text-slate-300 transition-colors hover:text-white"
+            className={`hover:text-primary transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             About
           </a>
           <a
             href="#"
-            className="text-slate-300 transition-colors hover:text-white"
+            className={`hover:text-primary transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             FAQ
           </a>
           <a
             href="#"
-            className="text-slate-300 transition-colors hover:text-white"
+            className={`hover:text-primary transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             Contact
           </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-6 md:flex">
           <a
             href="#"
-            className="hover:text-primary text-sm font-medium text-white transition-colors"
+            className={`hover:text-primary text-sm font-medium transition-colors ${scrolled ? "text-secondary" : "text-white/90"}`}
           >
             Sign In
           </a>
