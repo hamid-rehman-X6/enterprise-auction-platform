@@ -106,13 +106,13 @@ export default function FeaturedAuctions() {
                 alt={auction.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold shadow-sm backdrop-blur">
+              <div className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-medium shadow-sm backdrop-blur">
                 <span
                   className={`h-2 w-2 rounded-full ${auction.statusColor}`}
                 ></span>
                 {auction.status}
               </div>
-              <div className="absolute top-4 right-4 rounded-md bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+              <div className="absolute top-4 right-4 rounded-md bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-md">
                 {auction.category}
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function FeaturedAuctions() {
                 </div>
               </div>
 
-              <button className="border-primary/20 text-primary hover:bg-primary/5 mt-3 h-9 w-full rounded-md border py-2.5 text-sm font-medium transition-colors">
+              <button className="border-primary/20 text-primary hover:bg-primary/5 mt-3 flex h-9 w-full items-center justify-center rounded-md border py-2.5 text-sm font-medium transition-colors">
                 View Auction &rarr;
               </button>
             </div>
