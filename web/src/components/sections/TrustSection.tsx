@@ -56,32 +56,32 @@ export default function TrustSection() {
     <section className="bg-white">
       {/* Features Top Half */}
       <div className="section-container">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <h4 className="text-primary mb-4 text-sm font-bold tracking-widest uppercase">
+        <div className="mb-14 text-center">
+          <h4 className="text-primary mb-2 text-xs font-semibold tracking-widest uppercase">
             Trust & Compliance
           </h4>
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-3xl">
             Built for Enterprise Standards
           </h2>
-          <p className="text-lg text-slate-500">
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-slate-500">
             Every feature is designed with compliance, security, and
             auditability at its core.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((feat, i) => (
             <div
               key={i}
-              className="card group hover:border-primary/30 p-8 transition-colors"
+              className="rounded-xl border border-slate-200 p-6 transition-colors hover:border-teal-200"
             >
-              <div className="bg-primary/10 mb-6 flex h-12 w-12 items-center justify-center rounded-lg">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-teal-50">
                 {feat.icon}
               </div>
-              <h3 className="mb-3 text-lg font-bold text-slate-900">
+              <h3 className="mb-2 text-sm font-semibold text-slate-800">
                 {feat.title}
               </h3>
-              <p className="text-sm leading-relaxed text-slate-500">
+              <p className="text-xs leading-relaxed text-slate-500">
                 {feat.description}
               </p>
             </div>
