@@ -119,7 +119,7 @@ export default function HowItWorks() {
             <div className="flex items-center justify-between border-b border-slate-700 bg-[#0F172A] px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
-                <span className="text-sm font-semibold text-white">
+                <span className="text-xs font-semibold text-white">
                   LIVE — Fine Art Spring 2026
                 </span>
               </div>
@@ -128,52 +128,53 @@ export default function HowItWorks() {
               </div>
             </div>
 
-            <div className="p-6">
-              <div className="mb-8 flex gap-4">
+            <div className="p-4">
+              <div className="mb-4 flex gap-3">
                 <img
                   src={LIVE_AUCTION_ROOM.waterLilies}
                   alt="Artwork"
-                  className="h-24 w-24 rounded border border-white/10 object-cover"
+                  className="h-20 w-20 rounded-lg border border-slate-600 object-cover"
                 />
                 <div>
-                  <p className="mb-1 text-sm text-slate-400">Lot 1 of 48</p>
-                  <h3 className="mb-2 text-lg leading-tight font-bold text-white">
+                  <p className="mb-0.5 text-xs text-slate-400">Lot 1 of 48</p>
+                  <h3 className="text-sm leading-snug font-semibold text-white">
                     Monet — Water Lilies Study, 1906
                   </h3>
-                  <p className="text-sm text-slate-400">
+                  <p className="mt-1 text-xs text-slate-400">
                     Est. $20,000 – $30,000
                   </p>
                 </div>
               </div>
 
-              <div className="bg-dark mb-6 rounded-xl border border-white/5 p-6 text-center">
-                <p className="mb-2 text-sm font-medium tracking-wide text-slate-400 uppercase">
+              <div className="bg-secondary mb-4 rounded-lg p-3 text-center">
+                <p className="mb-1 text-xs text-slate-400">
                   Current Highest Bid
                 </p>
-                <div className="text-primary mb-1 text-4xl font-extrabold">
+                <div className="text-primary mb-1 font-mono text-3xl font-bold">
                   $24,500
                 </div>
-                <p className="text-center text-xs text-slate-500">
+                <p className="text-center text-xs text-slate-400">
                   Next minimum: $25,000
                 </p>
               </div>
 
-              <div className="mb-4 grid grid-cols-3 gap-3">
-                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+              <div className="mb-3 grid grid-cols-3 gap-2">
+                <button className="text-primary hover:bg-primary/10 h-8 flex-1 cursor-pointer rounded-md border border-teal-500/40 bg-[#1e293b] text-xs font-semibold whitespace-nowrap transition-colors">
                   $25,000
                 </button>
-                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+                <button className="text-primary hover:bg-primary/10 h-8 flex-1 cursor-pointer rounded-md border border-teal-500/40 bg-[#1e293b] text-xs font-semibold whitespace-nowrap transition-colors">
                   $26,000
                 </button>
-                <button className="text-primary border-primary/20 hover:bg-primary/10 rounded-lg border bg-[#1e293b] py-3 font-bold transition-colors">
+                <button className="text-primary hover:bg-primary/10 h-8 flex-1 cursor-pointer rounded-md border border-teal-500/40 bg-[#1e293b] text-xs font-semibold whitespace-nowrap transition-colors">
                   $28,000
                 </button>
               </div>
-              <button className="btn-primary mb-6 w-full rounded-lg py-4 text-lg font-bold shadow-lg">
+
+              <button className="btn-primary w-full cursor-pointer rounded-lg py-2.5 text-sm font-bold whitespace-nowrap shadow-md transition-colors">
                 Place Bid
               </button>
 
-              <div className="space-y-3">
+              <div className="mt-3 space-y-1.5">
                 {[
                   { u: "Buyer #4821", amt: "$24,500", t: "2m ago" },
                   { u: "Buyer #2934", amt: "$23,000", t: "4m ago" },
@@ -181,10 +182,10 @@ export default function HowItWorks() {
                 ].map((bid, i) => (
                   <div
                     key={i}
-                    className="flex justify-between border-b border-white/5 py-2 text-sm last:border-0"
+                    className="flex items-center justify-between rounded-md border border-teal-500/20 bg-teal-500/10 px-2.5 py-1.5 text-xs"
                   >
                     <span className="text-slate-400">{bid.u}</span>
-                    <span className="text-primary font-mono font-bold">
+                    <span className="text-primary font-mono font-semibold">
                       {bid.amt}
                     </span>
                     <span className="text-slate-500">{bid.t}</span>
